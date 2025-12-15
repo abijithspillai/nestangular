@@ -14,7 +14,8 @@ export class ContactComponent {
   message = '';
   submitted = false;
 
-  onSubmit() {
+  onSubmit(event: Event) {
+    event.preventDefault();
     if (this.name && this.email && this.message) {
       console.log('Form submitted:', {
         name: this.name,
